@@ -12,9 +12,10 @@ namespace Albuns.site.Controllers
             _photoRepository = new PhotoRepository();
         }
 
-        public ActionResult Index(int id)
+        public ActionResult Index(int albumId, int id)
         {
             ViewBag.photos = _photoRepository.getPhotos(id);
+            ViewBag.albumId = albumId;
             return View();
         }
     }

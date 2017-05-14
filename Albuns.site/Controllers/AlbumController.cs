@@ -15,6 +15,7 @@ namespace Albuns.site.Controllers
         public ActionResult Index(int id)
         {
             ViewBag.albums = _albumRepository.getAlbuns(id);
+            ViewBag.albumId = id;
             return View();
         }
     }

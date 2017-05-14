@@ -14,6 +14,12 @@ namespace Albuns.site
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "User", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Photo",
+                url: "Photo/Index/{albumId}/{id}",
+                defaults: new { controller = "Photo", action = "Index", albumId = UrlParameter.Optional, id = UrlParameter.Optional }
+        );
         }
     }
 }

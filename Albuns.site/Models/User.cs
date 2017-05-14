@@ -33,5 +33,4 @@
         public string catchPhrase { get; set; }
         public string bs { get; set; }
     }
-
 }
