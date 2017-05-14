@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Albuns.site.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace Albuns.site
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            DependencyResolver.SetResolver(new NinjectDependencyResolver());
+            AreaRegistration.RegisterAllAreas();            
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }

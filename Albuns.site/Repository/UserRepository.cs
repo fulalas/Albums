@@ -4,12 +4,17 @@ using System.Linq;
 
 namespace Albuns.site.Repository
 {
-    public class UserRepository
+    public interface IUserRepository
+    {
+        List<User> getUsers();
+    }
+
+    public class UserRepository : IUserRepository
     {
         public List<User> getUsers()
         {
             var url = @"https://jsonplaceholder.typicode.com/users";
-            var readJason = new ReadJason();
+            var readJason = new ReadJson();
             return readJason.readUrl<User>(url).ToList();
         }
     }

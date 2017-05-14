@@ -5,11 +5,11 @@ namespace Albuns.site.Controllers
 {
     public class UserController : Controller
     {
-        private readonly UserRepository _userRepository;
+        private readonly IUserRepository _userRepository;
 
-        public UserController()
+        public UserController(IUserRepository userRepository)
         {
-            _userRepository = new UserRepository();
+            _userRepository = userRepository;
         }
 
         public ActionResult Index()

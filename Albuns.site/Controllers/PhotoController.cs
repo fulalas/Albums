@@ -5,11 +5,11 @@ namespace Albuns.site.Controllers
 {
     public class PhotoController : Controller
     {
-        private readonly PhotoRepository _photoRepository;
+        private readonly IPhotoRepository _photoRepository;
 
-        public PhotoController()
+        public PhotoController(IPhotoRepository photoRepository)
         {
-            _photoRepository = new PhotoRepository();
+            _photoRepository = photoRepository;
         }
 
         public ActionResult Index(int albumId, int id)

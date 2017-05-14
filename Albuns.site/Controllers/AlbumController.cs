@@ -5,16 +5,16 @@ namespace Albuns.site.Controllers
 {
     public class AlbumController : Controller
     {
-        private readonly AlbumRepository _albumRepository;
+        private readonly IAlbumRepository _albumRepository;
 
-        public AlbumController()
+        public AlbumController(IAlbumRepository albumRepository)
         {
-            _albumRepository = new AlbumRepository();
+            _albumRepository = albumRepository;
         }
 
         public ActionResult Index(int id)
         {
-            ViewBag.albums = _albumRepository.getAlbuns(id);
+            ViewBag.albums = _albumRepository.getAlbums(id);
             ViewBag.albumId = id;
             return View();
         }

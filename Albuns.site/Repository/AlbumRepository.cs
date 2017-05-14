@@ -1,17 +1,20 @@
 ﻿using Albuns.site.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace Albuns.site.Repository
 {
-    public class AlbumRepository
+    public interface IAlbumRepository
     {
-        public List<Album> getAlbuns(int id)
+        List<Album> getAlbums(int id);
+    }
+
+    public class AlbumRepository : IAlbumRepository
+    {
+        public List<Album> getAlbums(int id)
         {
             var url = @"https://jsonplaceholder.typicode.com/albums";
-            var readJason = new ReadJason();
+            var readJason = new ReadJson();
             return readJason.readUrl<Album>(url).ToList().Where(x => x.userId == id).ToList();
         }
     }

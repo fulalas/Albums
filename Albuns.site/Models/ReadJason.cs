@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Albuns.site.Models
 {
-    public class ReadJason
+    public class ReadJson
     {
         public T[] readUrl<T>(string url)
         {
