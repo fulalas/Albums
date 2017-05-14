@@ -1,8 +1,8 @@
-﻿using Albuns.site.Models;
+﻿using Albums.web.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Albuns.site.Repository
+namespace Albums.web.Repository
 {
     public interface IPhotoRepository
     {

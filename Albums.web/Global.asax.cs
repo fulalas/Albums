@@ -1,4 +1,4 @@
-﻿using Albuns.site.App_Start;
+﻿using Albums.web.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Albuns.site
+namespace Albums.web
 {
     public class MvcApplication : System.Web.HttpApplication
     {

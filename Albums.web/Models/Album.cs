@@ -1,4 +1,4 @@
-﻿namespace Albuns.site.Models
+﻿namespace Albums.web.Models
 {
     public class Album
     {

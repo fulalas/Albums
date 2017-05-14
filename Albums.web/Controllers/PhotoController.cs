@@ -1,7 +1,7 @@
-﻿using Albuns.site.Repository;
+﻿using Albums.web.Repository;
 using System.Web.Mvc;
 
-namespace Albuns.site.Controllers
+namespace Albums.web.Controllers
 {
     public class PhotoController : Controller
     {

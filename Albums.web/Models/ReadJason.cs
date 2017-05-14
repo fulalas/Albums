@@ -3,7 +3,7 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Text;
 
-namespace Albuns.site.Models
+namespace Albums.web.Models
 {
     public class ReadJson
     {
