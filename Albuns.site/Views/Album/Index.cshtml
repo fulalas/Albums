@@ -1,0 +1,46 @@
+﻿
+@{
+	ViewBag.Title = "Albums";
+}
+
+<style>
+	ul {
+		list-style-type: none;
+	}
+
+	div {
+		padding-bottom: 10px;
+	}
+
+	.content {
+		position: absolute;
+		height: 80%;
+		width: 90%;
+		padding: 10% 5%;
+	}
+</style>
+
+<div class="container">
+	<h2 align="center"><u>Albums</u></h2>
+
+	<h4 align="center">
+		<a href="~/User">Back to users</a>
+	</h4>
+
+	<div class="row">
+		<ul>
+			@foreach (var item in ViewBag.albums)
+			{
+				<li>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<a href="~/Photo/Index/@item.id">
+							<div class="thumbnail" align="center">
+								<h3>@item.title</h3>
+							</div>
+						</a>
+					</div>
+				</li>
+			}
+		</ul>
+	</div>
+</div>
