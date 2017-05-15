@@ -12,9 +12,9 @@ namespace Albums.web.Controllers
             _photoRepository = photoRepository;
         }
 
-        public ActionResult Index(int albumId, int id)
+        public ActionResult Index(int albumId, int photoId)
         {
-            ViewBag.photos = _photoRepository.getPhotos(id);
+            ViewBag.photos = _photoRepository.getPhotos(photoId);
             ViewBag.albumId = albumId;
             return View();
         }

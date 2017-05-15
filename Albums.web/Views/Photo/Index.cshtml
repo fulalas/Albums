@@ -24,7 +24,7 @@
 	<h2 align="center"><u>Photos</u></h2>
 
 	<h4 align="center">
-		<a href="~/Album/Index/@ViewBag.albumId">Back to albums</a>
+		<a href="@(Url.Action("Index", "Album", new {@albumId = ViewBag.albumId}))">Back to albums</a>
 	</h4>
 
 	<div class="row">

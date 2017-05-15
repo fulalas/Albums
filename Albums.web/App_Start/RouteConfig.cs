@@ -17,7 +17,7 @@ namespace Albums.web
 
             routes.MapRoute(
                 name: "Photo",
-                url: "Photo/Index/{albumId}/{id}",
+                url: "Photo/Index/{albumId}/{photoId}",
                 defaults: new { controller = "Photo", action = "Index", albumId = UrlParameter.Optional, id = UrlParameter.Optional }
         );
         }

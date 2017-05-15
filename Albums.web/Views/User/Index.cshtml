@@ -28,7 +28,7 @@
 			{
 				<li>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<a href="~/Album/Index/@item.id">
+						<a href="@(Url.Action("Index", "Album", new {@albumId = item.id}))">
 							<div class="thumbnail" align="center">
 								<h2>@item.name</h2>
 								<h3>@item.username</h3>

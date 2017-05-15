@@ -20,7 +20,7 @@
 	}
 	
 	.thumbnail {
-		height: 100px;
+		height: 110px;
 		width: 90%;
 	}
 </style>
@@ -38,7 +38,7 @@
 			{
 				<li>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<a href="@(Url.Action("Index", "Photo", new {@albumId = ViewBag.albumId, @id = item.id}))">
+						<a href="@(Url.Action("Index", "Photo", new {@albumId = ViewBag.albumId, @photoId = item.id}))">
 							<div class="thumbnail" align="center">
 								<h3>@item.title</h3>
 							</div>

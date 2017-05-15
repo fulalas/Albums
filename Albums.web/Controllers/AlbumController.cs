@@ -12,10 +12,10 @@ namespace Albums.web.Controllers
             _albumRepository = albumRepository;
         }
 
-        public ActionResult Index(int id)
+        public ActionResult Index(int albumId)
         {
-            ViewBag.albums = _albumRepository.getAlbums(id);
-            ViewBag.albumId = id;
+            ViewBag.albums = _albumRepository.getAlbums(albumId);
+            ViewBag.albumId = albumId;
             return View();
         }
     }
