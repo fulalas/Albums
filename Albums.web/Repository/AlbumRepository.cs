@@ -14,8 +14,8 @@ namespace Albums.web.Repository
         public List<Album> getAlbums(int id)
         {
             var url = @"https://jsonplaceholder.typicode.com/albums";
-            var readJason = new ReadJson();
-            return readJason.readUrl<Album>(url).ToList().Where(x => x.userId == id).ToList();
+            var readJson = new ReadJson();
+            return readJson.readUrl<Album>(url).Where(x => x.userId == id).ToList();
         }
     }
 }
